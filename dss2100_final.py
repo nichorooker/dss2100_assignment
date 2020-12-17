@@ -11,11 +11,11 @@ if __name__ == '__main__': #main guard so function can be used seperately
     import pandas as pd
 # installing packages used
 
-    data1 = pd.read_csv("gandhi_et_al_bouts.csv", skiprows=4)
+    fish_data = pd.read_csv("gandhi_et_al_bouts.csv", skiprows=4)
 # read in data, and skip the rows not containing data
 
-    bout_lengths_wt = list(data1[data1.genotype == "wt"].bout_length)
-    bout_lengths_mut = list(data1[data1.genotype == "mut"].bout_length)
+    bout_lengths_wt = list(fish_data[fish_data.genotype == "wt"].bout_length)
+    bout_lengths_mut = list(fish_data[fish_data.genotype == "mut"].bout_length)
 # create lists of the bout lengths for the different genotypes
 
     mean_wt = np.mean(bout_lengths_wt)
