@@ -4,7 +4,7 @@ def draw_boot_reps(data, func, size):
     for i in range(size):
         boot_replicates[i] = func(np.random.choice(data, len(data)))
     return boot_replicates
-    #
+#function taking data and returning an array of bootstrap replicates
     
 if __name__ == '__main__': #main guard so function can be used seperately 
     import numpy as np
